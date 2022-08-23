@@ -1,0 +1,26 @@
+<input type="text" [(ngModel)]="searchTerm" (ngModelChange)="search()">
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>TicketNumber</th>
+            <th>Ticket Topic</th>
+            <th>Exam Grade</th>
+            <th>Rating Grade</th>
+            <th>Final Grade</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let student of students">
+        <td>{{student.name}}</td>
+        <td>{{student.ticketNumber}}</td>
+        <td>{{student.ticketTopic}}</td>
+        <td>{{student.examGrade}}</td>
+        <td>{{student.ratingGrade}}</td>
+        <td>{{student.finalGrade}}</td>
+        <td>{{student.status}}</td>
+    </tr>
+
+    </tbody>
+</table>
